@@ -1,0 +1,278 @@
+$mq-mobile-portrait   : 320px  !default;
+$mq-mobile-landscape  : 480px  !default;
+$mq-tablet-portrait   : 768px  !default;
+$mq-tablet-landscape  : 980px  !default;
+$mq-desktop           : 1200px !default;
+
+
+//MOBILE
+// Both portrait and landscape
+@mixin mobile-only {
+  @media (max-width : $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+// Everything up to and including the portrait width of the phone
+// Since it's the smallest query it doesn't need a min
+@mixin mobile-portrait-only {
+  @media (max-width : $mq-mobile-portrait) {
+    @content;
+  }
+}
+
+// Everything up to and including the mobile portrait
+@mixin mobile-portrait-and-below {
+  @media (max-width : $mq-mobile-portrait) {
+    @content;
+  }
+}
+
+// Everything above and including the mobile portrait
+@mixin mobile-portrait-and-up {
+  @media (min-width : $mq-mobile-portrait) {
+    @content;
+  }
+}
+
+// Everthing larger than a portrait mobile up until mobile landscape
+@mixin mobile-landscape-only {
+  @media only screen and (min-width : $mq-mobile-portrait + 1) and (max-width : $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+// Everything up to and including the mobile landscape width
+@mixin mobile-landscape-and-below {
+  @media only screen and (max-width : $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+// Everything above and including the mobile landscape width
+@mixin mobile-landscape-and-up {
+  @media only screen and (min-width : $mq-mobile-portrait + 1) {
+    @content;
+  }
+}
+
+// tablet
+// ------------------------------
+
+// Both the portrait and landscape width of the tablet
+// Larger than a landscape mobile but less than or equal to a landscape tablet
+@mixin tablet-only {
+  @media only screen and (min-width : $mq-mobile-landscape + 1) and (max-width : $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+// Everything larger than mobile landscape up until the portrait width of the tablet
+@mixin tablet-portrait-only {
+  @media only screen and (min-width : $mq-mobile-landscape + 1) and (max-width : $mq-tablet-portrait) {
+    @content;
+  }
+}
+
+// Everything below and including the portrait width of the tablet
+@mixin tablet-portrait-and-below {
+  @media only screen and (max-width : $mq-tablet-portrait) {
+    @content;
+  }
+}
+
+// Everything above and including the portrait width of the tablet
+@mixin tablet-portrait-and-up {
+  @media only screen and (min-width : $mq-mobile-landscape + 1) {
+    @content;
+  }
+}
+
+// Larger than portrait but less than or equal to the landscape width
+@mixin tablet-landscape-only {
+  @media only screen and (min-width : $mq-tablet-portrait + 1) and (max-width : $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+// Up to and including the tablet landscape
+@mixin tablet-landscape-and-below {
+  @media only screen and (max-width : $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+// Everything larger than portrait tablet
+@mixin tablet-landscape-and-up {
+  @media only screen and (min-width : $mq-tablet-portrait + 1) {
+    @content;
+  }
+}
+
+// desktop
+// ------------------------------
+
+// Everything larger than a landscape tablet
+@mixin desktop-and-up {
+  @media only screen and (min-width : $mq-tablet-landscape + 1) {
+    @content;
+  }
+}
+
+// Everything below and including the desktop 
+@mixin desktop-and-below {
+  @media only screen and (max-width : $mq-desktop) {
+    @content;
+  }
+}
+
+// Everything larger than a landscape tablet but less than or equal to the desktop
+@mixin desktop-and-below {
+  @media only screen and (min-width : $mq-tablet-landscape + 1) and (max-width : $mq-desktop) {
+    @content;
+  }
+}
+
+// retina
+// ------------------------------
+
+// Retina screens have a 1.5 pixel ratio, not 2
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    @content;
+  }
+}
+
+@include mobile-only() {
+
+  //Section
+  section {
+    .titleSection {
+      font-size: 1.4rem;
+    }
+  }
+
+  //navClient
+  .navClient {
+    .logoHeader {
+      width: 150px;
+    }    
+    &.fixClient {
+      .logoHeader {
+        width: 150px;
+      }    
+    }
+  }
+
+  //header
+  header {
+    min-height: 500px;
+    padding: 6.0rem 0 2.0rem 0;
+    .titlePage {
+      margin-top: 180px;
+      font-size: 1.4rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    
+    .btn {
+      width: 100%;
+    }  
+    .float {
+      right: 0;
+      left: 0;
+       img {
+        width: 90%;
+       }
+    }
+  }
+
+  #solucoes {
+    .sol {
+      margin-bottom: 1.0rem !important;
+    }
+    .titleSol-1,
+    .titleSol-2 {
+      font-size: 1.1rem !important;
+    }
+  }
+
+  //video case
+  #video-case {
+    .bt-video {
+      top: 30%;     
+    }
+  }
+  
+  .content-flex {
+    flex-direction: column;
+  }
+  
+  .clients {
+    justify-content: flex-start;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    &:before {
+      content: 'Clientes:';
+      font-size: 0.8rem;
+      display: block;
+      position: absolute;
+      top: -40px;
+    }
+    .client {
+      margin: 0 1.0rem;
+    }
+  }
+
+  .content-fl-icons {
+    display: block;
+    ul {
+      li {
+        display: block;
+        text-align: center;
+        .icon {
+          margin: 0 auto 0.4rem;
+        }
+      }
+    }
+  }
+
+  #outsourcing {
+    .content-fl-icons {
+      display: block;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .content-section {
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+
+  #consultoria,
+  #sobre {
+    .content-flex {
+      .content-section {
+        width: 100%;
+        padding: 1.0rem;
+      }
+    }
+  }
+
+  .bt-send {
+    width: 100%;
+  }
+
+  //Footer
+  footer {
+    .logoFooter {
+      width: 80px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+@include mobile-portrait-only() {}
+

@@ -1,0 +1,42 @@
+{
+  "name": "lp-auditoria",
+  "version": "1.0.0",
+  "description": "landing page proaudit",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2",
+    "animate.css": "^3.7.0",
+    "bootstrap": "^4.4.1",
+    "bootstrap-select": "^1.13.10",
+    "browser-sync": "^2.26.5",
+    "ekko-lightbox": "^5.3.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-watch": "^5.0.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leosaraujos/lp-proaudit.git"
+  },
+  "author": "leo araujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leosaraujos/lp-proaudit/issues"
+  },
+  "homepage": "https://github.com/leosaraujos/lp-proaudit#readme"
+}
