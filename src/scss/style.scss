@@ -109,7 +109,7 @@ section {
 
 //navClient
 .navClient {
-  background-color: transparent !important;
+  background-color: $white !important;
   .nav-link {
     color: $blue !important;
     font-weight: $semi-b;
@@ -147,6 +147,7 @@ header {
   background: url('../images/image-bg-header.jpg') top center no-repeat;
   .titlePage {
     color: $white;
+    // color: $blue;
     font-weight: $bold;
     @extend %z-1;
   }
@@ -193,7 +194,7 @@ strong {
   justify-content: space-around;
   align-items: center;
   .client {
-    opacity: 0.4;
+    opacity: 0.2;
     img {
        filter: grayscale(100%) !important;
     }

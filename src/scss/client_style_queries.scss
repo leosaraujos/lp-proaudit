@@ -169,15 +169,20 @@ $mq-desktop           : 1200px !default;
     min-height: 500px;
     padding: 6.0rem 0 2.0rem 0;
     .titlePage {
-      margin-top: 180px;
+      margin-top: 230px;
       font-size: 1.4rem;
+      color:  #351071;
     }
     p {
       font-size: 0.9rem;
+      color:  #351071;
     }
     
     .btn {
       width: 100%;
+      padding: 1.0rem 0;
+      color: #fff;
+      background:  #351071;
     }  
     .float {
       right: 0;
@@ -214,6 +219,7 @@ $mq-desktop           : 1200px !default;
     overflow-y: hidden;
     overflow-x: scroll;
     &:before {
+      color:  #351071;
       content: 'Clientes:';
       font-size: 0.8rem;
       display: block;
